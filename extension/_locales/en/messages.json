@@ -1,0 +1,49 @@
+{
+  "extName": {
+    "message": "nowpass Password Manager"
+  },
+  "extDesc": {
+    "message": "Open-Source password management."
+  },
+  "ext_default_title": {
+    "message": "nowpass"
+  },
+
+  "direction": {
+    "message": "ltr"
+  },
+  "save": {
+    "message": "Save and Login"
+  },
+  "saveStatus": {
+    "message": "Options saved"
+  },
+
+
+  "nowpassOption": {
+    "message": "nopwass Options"
+  },
+  "apiUrl": {
+    "message": "API server"
+  },
+  "apiEmail": {
+    "message": "API email"
+  },
+  "apiPassword": {
+    "message": "API password"
+  },
+  "storePassphrase": {
+    "message": "Store pass phrase?"
+  },
+  "passphrase": {
+    "message": "Pass phrase"
+  },
+
+
+  "invalidChars": {
+    "message": "Invalid character(s)"
+  },
+  "fetchError": {
+    "message": "Error: Failed to connect to nowpass API."
+  }
+}

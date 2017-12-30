@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>nowpass Password Manager</title>
+
+    <link href="../css/nowpass.css" rel="stylesheet"/>
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery-noconflict.js"></script>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/popup.js"></script>
+</head>
+
+<body>
+<h3>nowpass Password Manager</h3>
+
+<div id="container">
+    <div id="search-container">
+        <input type="text" id="search"/>
+    </div>
+
+    <div id="passwords">
+        <div id="password-draft" class="password-row hidden">
+            <button id="btnInsert-draft">
+
+            </button>
+        </div>
+    </div>
+
+    <div id="links">
+        <button id="btn-storage">
+            My Storage
+        </button>
+        <button id="btn-options">
+            Options
+        </button>
+        <button id="btn-logout">
+            Logout
+        </button>
+    </div>
+</div>
+
+<div id="app">
+    Vue Message: {{message}}
+</div>
+
+</body>
+</html>
