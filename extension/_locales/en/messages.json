@@ -108,6 +108,33 @@
     "message":"Updated at"
   },
 
+  "my_vault": {
+    "message":"My Vault"
+  },
+  "my_notes": {
+    "message":"My notes"
+  },
+  "generate_password": {
+    "message":"Generate Password"
+  },
+  "help": {
+    "message":"Help"
+  },
+  "options": {
+    "message":"Options"
+  },
+  "logout": {
+    "message":"Logout"
+  },
+  "copy_password": {
+    "message":"Copy Password"
+  },
+  "use": {
+    "message":"Use"
+  },
+  "remember_passphrase": {
+    "message":"Remember Passphrase"
+  },
 
   "invalidChars": {
     "message": "Invalid character(s)"
