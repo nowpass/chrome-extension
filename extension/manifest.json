@@ -7,20 +7,23 @@
   "default_locale":"en",
 
   "browser_action": {
-    "default_icon": "img/icon.png",
-    "default_popup": "views/popup.html",
+    "default_icon": "static/img/icon.png",
+    "default_popup": "views/start.html#/popup",
     "default_title": "__MSG_ext_default_title__"
   },
 
   "background": {
-    "scripts": ["js/context.js"]
+    "scripts": ["static/js/context.js"]
   },
 
-  "options_page": "views/options.html",
+  "options_page": "views/start.html#/options",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 
   "permissions": [
     "tabs",
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead"
   ]
 }

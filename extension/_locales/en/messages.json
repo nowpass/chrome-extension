@@ -8,7 +8,6 @@
   "ext_default_title": {
     "message": "nowpass"
   },
-
   "direction": {
     "message": "ltr"
   },
@@ -18,25 +17,95 @@
   "saveStatus": {
     "message": "Options saved"
   },
-
+  "testApi": {
+    "message": "Test Options"
+  },
 
   "nowpassOption": {
-    "message": "nopwass Options"
+    "message": "Options"
   },
   "apiUrl": {
-    "message": "API server"
+    "message": "API server URL"
   },
   "apiEmail": {
-    "message": "API email"
+    "message": "Email / Login"
   },
   "apiPassword": {
-    "message": "API password"
+    "message": "Pass phrase"
   },
   "storePassphrase": {
-    "message": "Store pass phrase?"
+    "message": "Store pass phrase in Chrome?"
   },
   "passphrase": {
     "message": "Pass phrase"
+  },
+  "insecure": {
+    "message":"Insecure"
+  },
+
+
+  "title": {
+    "message":"Title"
+  },
+  "url": {
+    "message":"URL"
+  },
+  "username": {
+    "message":"Username"
+  },
+  "password": {
+    "message":"Password"
+  },
+  "comment": {
+    "message":"Comment"
+  },
+  "showing": {
+    "message":"Showing"
+  },
+  "new_login": {
+    "message":"New Login"
+  },
+  "enter_your_pass_phrase": {
+    "message":"Enter your pass phrase"
+  },
+  "cancel": {
+    "message":"Cancel"
+  },
+  "unlock": {
+    "message":"Unlock"
+  },
+  "password_generator": {
+    "message":"Password Generator"
+  },
+  "generate_new": {
+    "message":"Generate new"
+  },
+  "numbers": {
+    "message":"Numbers"
+  },
+  "special_characters": {
+    "message":"Special Characters"
+  },
+  "password_length": {
+    "message":"Password Length"
+  },
+  "use_password": {
+    "message":"Use Password"
+  },
+  "loading": {
+    "message":"Loading"
+  },
+  "show": {
+    "message":"Show"
+  },
+  "hide": {
+    "message":"Hide"
+  },
+  "created_at": {
+    "message":"Created at"
+  },
+  "updated_at": {
+    "message":"Updated at"
   },
 
 

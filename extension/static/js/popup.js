@@ -52,4 +52,3 @@ jQuery(document).ready(function ($) {
     // Draw the elements (async)
     nowApi.getElements(printElements, printError, options);
 });
-
