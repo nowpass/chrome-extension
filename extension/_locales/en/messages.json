@@ -135,6 +135,12 @@
   "remember_passphrase": {
     "message":"Remember Passphrase"
   },
+  "close": {
+    "message":"Close"
+  },
+  "elements_for": {
+    "message":"Logins for"
+  },
 
   "invalidChars": {
     "message": "Invalid character(s)"

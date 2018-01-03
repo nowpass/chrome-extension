@@ -1,0 +1,35 @@
+{
+  "name": "nowpass-chrome",
+  "version": "0.1.0",
+  "description": "nowpass Password manager Chrome extension",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-register": "^6.26.0",
+    "babel-preset-es2016": "^6.24.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node_modules/.bin/webpack --watch --config webpack.config.background.js\" \"node_modules/.bin/webpack --watch --config webpack.config.content.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/yveshoppe/nowpass-chrome.git"
+  },
+  "keywords": [
+    "nowpass",
+    "password"
+  ],
+  "author": "Yves Hoppe",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://gitlab.com/yveshoppe/nowpass-chrome/issues"
+  },
+  "homepage": "https://gitlab.com/yveshoppe/nowpass-chrome#README"
+}

@@ -12,7 +12,7 @@
   "background": {
     "scripts": [
       "static/js/axios.min.js",
-      "static/js/background.js"
+      "static/js/background.min.js"
     ]
   },
   "content_scripts": [
@@ -21,7 +21,7 @@
         "<all_urls>"
       ],
       "js": [
-        "static/js/content-script.js"
+        "static/js/content-script.min.js"
       ],
       "all_frames": true
     }
@@ -37,5 +37,8 @@
     "clipboardRead",
     "declarativeWebRequest",
     "*://*/*"
+  ],
+  "web_accessible_resources": [
+    "views/start.html"
   ]
 }
