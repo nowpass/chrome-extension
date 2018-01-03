@@ -28,6 +28,7 @@ export default function (info, tab) {
             url: chrome.extension.getURL("views/start.html#/generate/" + encodeURI(host))
         });
     } catch (err) {
-        console.log('Could not take care of request ' + url)
+        console.log('Could not take care of request ' + url);
+        console.log(err)
     }
 }

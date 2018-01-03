@@ -19,8 +19,6 @@ import passwordData from './PasswordData'
  * @returns {boolean}
  */
 export default function(params) {
-    console.log('Filling login');
-
     let login = params.login;
 
     if (!login) {

@@ -29,8 +29,6 @@ export default {
         div.style.overflow = 'hidden';
         div.style.borderRadius = '5px';
 
-        console.log('element position' + JSON.stringify(elementPosition));
-
         let iframe = document.createElement('iframe');
 
         iframe.src = iframeSrc;
