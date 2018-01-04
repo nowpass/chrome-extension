@@ -21,11 +21,9 @@ export default class Generator {
     init() {
         // Receive message for Login tasks
         chrome.runtime.onMessage.addListener(function(message, _, sendResponse) {
-            console.log("Requested Generator: " + JSON.stringify(message));
-
-            let element = window.nowpass.clickedElement || document.activeElement;
-
             if (message.task === 'generate') {
+                let element = window.nowpass.clickedElement || document.activeElement;
+
                 // Get generator iframe
                 popup.showIframe(element, message.url)
             } else if (message.task === 'insert') {

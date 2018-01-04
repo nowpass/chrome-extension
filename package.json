@@ -4,9 +4,11 @@
   "description": "nowpass Password manager Chrome extension",
   "main": "index.js",
   "dependencies": {
+    "aes-js": "^3.1.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-es2016": "^6.24.1",
     "babel-register": "^6.26.0",
-    "babel-preset-es2016": "^6.24.1"
+    "js-sha256": "^0.9.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",

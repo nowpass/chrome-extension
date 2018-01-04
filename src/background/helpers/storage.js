@@ -53,4 +53,8 @@ export default {
 
         return def;
     },
+
+    set: function (key, val) {
+        window.localStorage.setItem(key, val);
+    }
 }

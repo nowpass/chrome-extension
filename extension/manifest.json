@@ -32,10 +32,13 @@
     "activeTab",
     "tabs",
     "storage",
+    "notifications",
     "contextMenus",
     "clipboardWrite",
     "clipboardRead",
     "declarativeWebRequest",
+    "webRequest",
+    "webRequestBlocking",
     "*://*/*"
   ],
   "web_accessible_resources": [

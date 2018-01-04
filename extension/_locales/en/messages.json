@@ -43,7 +43,15 @@
     "message":"Insecure"
   },
 
-
+  "vault": {
+    "message":"Vault"
+  },
+  "notes": {
+    "message":"Notes"
+  },
+  "secure_notes": {
+    "message":"Secure Notes"
+  },
   "title": {
     "message":"Title"
   },
@@ -140,6 +148,15 @@
   },
   "elements_for": {
     "message":"Logins for"
+  },
+  "store_login_for": {
+    "message":"Store login for"
+  },
+  "store_as_new_item": {
+    "message":"Store as new Login"
+  },
+  "update_existing_login": {
+    "message":"Update existing login"
   },
 
   "invalidChars": {

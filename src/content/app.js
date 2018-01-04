@@ -4,13 +4,17 @@
 
 import Login from './login/Login'
 import Generator from './generator/Generator'
+import Store from "./store/Store";
 
 // Store / Global item
 window.nowpass = {
     clickedElement: null
 };
 
-// Login events
+// Listen to store message
+window.nowpass.store = new Store();
+
+// Context events
 window.nowpass.login = new Login();
 window.nowpass.generator = new Generator();
 
@@ -20,3 +24,11 @@ document.addEventListener('mousedown', function(event){
         window.nowpass.clickedElement = event.target;
     }
 });
+
+// Inform the backend we are set
+chrome.extension.sendMessage({type: 'notification', options: {message: "ready"}
+    }, function(response) {
+    //code to initialize my extension
+    console.log('response from backend' + JSON.stringify(response));
+});
+

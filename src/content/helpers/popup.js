@@ -12,7 +12,12 @@ export default {
      * @param iframeSrc {string} The src to be included
      */
     showIframe(element, iframeSrc) {
-        let elementPosition = this.getElementPositions(element);
+        // Hardcoded for now
+        let elementPosition = {top: -35, right: 20};
+
+        if (element) {
+            elementPosition = this.getElementPositions(element);
+        }
 
         // Create a new container
         let div = document.createElement("div");
@@ -21,7 +26,14 @@ export default {
 
         // Hardcoded for now
         div.style.top = (elementPosition.top + 35) + 'px';
-        div.style.left = (elementPosition.left + 20) + 'px';
+
+        if (elementPosition.left) {
+            div.style.left = (elementPosition.left + 20) + 'px';
+        }
+
+        if (elementPosition.right) {
+            div.style.right = (elementPosition.right) + 'px';
+        }
 
         div.style.width = this.POPUP_WIDTH;
         div.style.height = this.POPUP_HEIGHT;

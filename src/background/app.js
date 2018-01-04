@@ -2,10 +2,12 @@ import handleEditable from './context/editable'
 import handleGenerate from './context/generator'
 import handleNote from './context/note'
 
+import handlerPost from './webrequest/post'
+
 import tabHelper from './helpers/tab'
 
 // Make sure temporary passphrase is cleaned
-chrome.runtime.onStartup.addListener(function() {
+chrome.runtime.onStartup.addListener(function () {
     chrome.storage.localStorage.setItem('temporary_passphrase', '')
 });
 
@@ -15,7 +17,7 @@ chrome.runtime.onStartup.addListener(function() {
 chrome.contextMenus.create({
     "title": 'nowpass',
     "contexts": ['editable'],
-    "id": 'editableInsert'
+    "id": 'editableInsertNowpass'
 });
 
 /* Show different task, selectable */
@@ -23,7 +25,7 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "title": "Insert Login",
     "contexts": ['editable'],
-    'parentId': 'editableInsert',
+    'parentId': 'editableInsertNowpass',
     'onclick': handleEditable
 });
 
@@ -31,7 +33,7 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "title": "Generate Password",
     "contexts": ['editable'],
-    'parentId': 'editableInsert',
+    'parentId': 'editableIdnsertNowpass',
     'onclick': handleGenerate
 });
 
@@ -47,8 +49,26 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "title": "Open nowpass",
     "contexts": ['page'],
-    "onclick": () => {tabHelper.focusOrCreateTab(chrome.extension.getURL("views/start.html#/"))}
+    "onclick": () => {
+        tabHelper.focusOrCreateTab(chrome.extension.getURL("views/start.html#/"))
+    }
 });
 
 /*--------End Context------------*/
 
+/* The Web Request API */
+const webRequest = chrome.webRequest;
+
+// Handle password post / login
+webRequest.onBeforeRequest.addListener(
+    handlerPost.post,
+    {urls: ["<all_urls>"]},
+    ["requestBody"]
+);
+
+chrome.runtime.onMessage.addListener(function (request, sender) {
+    // We have to show the post
+    if (request.type === 'notification' && request.options.message === 'ready') {
+        handlerPost.ready();
+    }
+});
