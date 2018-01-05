@@ -1,6 +1,7 @@
 import storage from '../helpers/storage'
 import notify from '../helpers/notification'
 import encrypt from '../helpers/encrypt'
+import tabHelper from "../helpers/tab";
 
 /**
  * Handle storing selected text secure not
@@ -9,11 +10,8 @@ import encrypt from '../helpers/encrypt'
  * @param tab {object}
  */
 export default function (info, tab) {
-    let passphrase = storage.getPassphrase();
-
-    if (!passphrase) {
-        focusOrCreateTab(chrome.extension.getURL("views/start.html#/unlock"));
-
+    // The passphrase needs to be unlocked before we can insert an element
+    if (!tabHelper.hasPassphraseOrShowUnlock()) {
         return;
     }
 
@@ -24,6 +22,8 @@ export default function (info, tab) {
 
         return;
     }
+
+    let passphrase = storage.getPassphrase();
 
     // TODO move to element creation
     let note = {
@@ -48,7 +48,6 @@ export default function (info, tab) {
     }).then(function (response) {
         notify.show('Secure Note saved', 'Your secure note has been successfully stored in your Vault.')
     }).catch(function (error) {
-        // TODO handle error
         notify.show('Error saving note', 'Your secure note could not be stored.');
         console.log(error);
     });

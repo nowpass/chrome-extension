@@ -1,6 +1,8 @@
 import storage from '../helpers/storage'
 import message from '../helpers/message'
 import urlHelper from '../helpers/url'
+import tabHelper from '../helpers/tab'
+import notify from "../helpers/notification";
 
 /**
  * Handler for edit (input) elements (For Logins), opening the right iFrame popup etc.
@@ -9,11 +11,8 @@ import urlHelper from '../helpers/url'
  * @param tab {object}
  */
 export default function (info, tab) {
-    let passphrase = storage.getPassphrase();
-
-    if (!passphrase) {
-        focusOrCreateTab(chrome.extension.getURL("views/start.html#/unlock"));
-
+    // The passphrase needs to be unlocked before we can insert an element
+    if (!tabHelper.hasPassphraseOrShowUnlock()) {
         return;
     }
 
@@ -28,6 +27,7 @@ export default function (info, tab) {
             url: chrome.extension.getURL("views/start.html#/insert/" + encodeURI(host))
         });
     } catch (err) {
-        console.log('Could not take care of request ' + url)
+        console.log('Could not take care of request ' + url);
+        notify.show('Error loading', 'Loading password choose failed: ' + JSON.stringify(err));
     }
 }

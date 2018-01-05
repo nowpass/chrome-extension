@@ -1,6 +1,8 @@
 import storage from '../helpers/storage'
 import message from '../helpers/message'
 import urlHelper from '../helpers/url'
+import tabHelper from "../helpers/tab";
+import notify from "../helpers/notification";
 
 /**
  * Handle teh generator popup
@@ -9,11 +11,8 @@ import urlHelper from '../helpers/url'
  * @param tab {object}
  */
 export default function (info, tab) {
-    let passphrase = storage.getPassphrase();
-
-    if (!passphrase) {
-        focusOrCreateTab(chrome.extension.getURL("views/start.html#/unlock"));
-
+    // The passphrase needs to be unlocked before we can insert an element
+    if (!tabHelper.hasPassphraseOrShowUnlock()) {
         return;
     }
 
@@ -29,6 +28,6 @@ export default function (info, tab) {
         });
     } catch (err) {
         console.log('Could not take care of request ' + url);
-        console.log(err)
+        notify.show('Error loading', 'Loading Generator failed: ' + JSON.stringify(err));
     }
 }

@@ -1,3 +1,5 @@
+import storage from "./storage";
+
 /**
  * Tab Helpers
  */
@@ -33,5 +35,15 @@ export default {
 
             chrome.tabs.create({"url": url, "selected": true});
         });
+    },
+
+    hasPassphraseOrShowUnlock: function () {
+        if (!storage.getPassphrase()) {
+            this.focusOrCreateTab(chrome.extension.getURL("views/start.html#/unlock"));
+
+            return false;
+        }
+
+        return true;
     }
 }

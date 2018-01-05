@@ -33,7 +33,7 @@ chrome.contextMenus.create({
 chrome.contextMenus.create({
     "title": "Generate Password",
     "contexts": ['editable'],
-    'parentId': 'editableIdnsertNowpass',
+    'parentId': 'editableInsertNowpass',
     'onclick': handleGenerate
 });
 
