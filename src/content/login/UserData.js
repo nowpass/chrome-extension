@@ -10,8 +10,9 @@ import domSearch from './DomSearch'
 export default function(params) {
     let login = params.login;
 
+    // Try using the login form_data if any, else we try the preset (if any)
     // Presets are predefined templates, so we don't have to parse the page
-    let preset = presets[login.host];
+    let preset = JSON.parse(login.form_data) || presets[login.host];
 
     if (preset) {
         let isUserFilled = false;

@@ -1,5 +1,7 @@
 /**
  * Popup helper
+ *
+ * TODO make class, could be called multiple times
  */
 export default {
     POPUP_WIDTH: '400px',
@@ -40,6 +42,7 @@ export default {
         div.style.zIndex = '2147483647';
         div.style.overflow = 'hidden';
         div.style.borderRadius = '5px';
+        div.style.border = '1px solid #ccc';
 
         let iframe = document.createElement('iframe');
 

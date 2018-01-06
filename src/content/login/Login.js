@@ -70,6 +70,6 @@ export default class Login {
         // Delete login
         this.login = null;
         window.nowpass.clickedElement = null;
-        popup.closePopup();
+        this.popup.closePopup();
     }
 }

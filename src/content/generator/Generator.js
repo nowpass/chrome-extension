@@ -9,7 +9,6 @@ export default class Generator {
      */
     constructor() {
         this.popup = popup;
-        this.clickedElement = null;
 
         // Set up event listener
         this.init()
@@ -26,7 +25,7 @@ export default class Generator {
 
                 // Get generator iframe
                 popup.showIframe(element, message.url)
-            } else if (message.task === 'insert') {
+            } else if (message.task === 'generatedInsert') {
                 window.nowpass.generator.insert(message.generatedPassword);
             } else if (message.task === 'close') {
                 // Close elements
@@ -38,7 +37,22 @@ export default class Generator {
     /**
      * Inserts the generated password into the given field
      */
-    insert() {
+    insert(pass) {
+        console.log(pass);
 
+        let clickedElement = window.nowpass.clickedElement || document.activeElement;
+
+        let tag = clickedElement.tagName;
+
+        if (tag === 'INPUT') {
+            clickedElement.value = pass;
+        } else if (tag === 'TEXTAREA') {
+            clickedElement.innerHTML = pass;
+        } else {
+            console.log('Can not handle tag ' + tag);
+        }
+
+        window.nowpass.clickedElement = null;
+        this.popup.closePopup();
     }
 }

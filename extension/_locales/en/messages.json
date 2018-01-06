@@ -158,6 +158,9 @@
   "update_existing_login": {
     "message":"Update existing login"
   },
+  "validation_failed": {
+    "message":"API validation failed, check your settings."
+  },
 
   "invalidChars": {
     "message": "Invalid character(s)"

@@ -16,18 +16,13 @@ export default function (info, tab) {
         return;
     }
 
-    let url = info.pageUrl;
-
     try {
-        let host = urlHelper.parse(url).host;
-
         // Handle
         message.sendMessage({
             task: 'generate',
-            url: chrome.extension.getURL("views/start.html#/generate/" + encodeURI(host))
+            url: chrome.extension.getURL("views/start.html#/generate")
         });
     } catch (err) {
-        console.log('Could not take care of request ' + url);
         notify.show('Error loading', 'Loading Generator failed: ' + JSON.stringify(err));
     }
 }

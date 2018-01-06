@@ -8,14 +8,13 @@
  * - else insert only (if type password) -> password
  */
 
-import formData from './FormData'
 import userData from './UserData'
 import passwordData from './PasswordData'
 
 /**
  * Try to fill the form
  *
- * @param params
+ * @param params {objecŧ}
  * @returns {boolean}
  */
 export default function(params) {
@@ -25,14 +24,8 @@ export default function(params) {
         return false;
     }
 
-    // We have a serialized form, that makes things easier
-    let result = formData(params);
-
-    if (result) {
-        return true;
-    }
-
     // We have a username, so two fields (at least to fill)
+    // First checks if we have form data, than checks if we have a preset for this site, than searches the DOM
     result = userData(params);
 
     if (result) {
