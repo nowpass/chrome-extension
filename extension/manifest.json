@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "default_locale": "en",
   "browser_action": {
-    "default_icon": "static/img/icon.png",
+    "default_icon": "static/img/icon-64.png",
     "default_popup": "views/start.html#/popup",
     "default_title": "__MSG_ext_default_title__"
   },

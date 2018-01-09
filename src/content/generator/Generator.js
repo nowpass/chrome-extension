@@ -27,7 +27,7 @@ export default class Generator {
                 popup.showIframe(element, message.url)
             } else if (message.task === 'generatedInsert') {
                 window.nowpass.generator.insert(message.generatedPassword);
-            } else if (message.task === 'close') {
+            } else if (message.task === 'generatedClose') {
                 // Close elements
                 popup.closePopup();
             }
