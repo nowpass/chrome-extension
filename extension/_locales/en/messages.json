@@ -1,12 +1,12 @@
 {
   "extName": {
-    "message": "nowpass Password Manager"
+    "message": "NOWPASS Password Manager"
   },
   "extDesc": {
     "message": "Open-Source password management."
   },
   "ext_default_title": {
-    "message": "nowpass"
+    "message": "NOWPASS"
   },
   "direction": {
     "message": "ltr"
@@ -20,7 +20,6 @@
   "testApi": {
     "message": "Test Options"
   },
-
   "nowpassOption": {
     "message": "Options"
   },
@@ -40,132 +39,141 @@
     "message": "Pass phrase"
   },
   "insecure": {
-    "message":"Insecure"
+    "message": "Insecure"
   },
-
   "vault": {
-    "message":"Vault"
+    "message": "Vault"
   },
   "notes": {
-    "message":"Notes"
+    "message": "Notes"
   },
   "secure_notes": {
-    "message":"Secure Notes"
+    "message": "Secure Notes"
   },
   "title": {
-    "message":"Title"
+    "message": "Title"
   },
   "url": {
-    "message":"URL"
+    "message": "URL"
   },
   "username": {
-    "message":"Username"
+    "message": "Username"
   },
   "password": {
-    "message":"Password"
+    "message": "Password"
   },
   "comment": {
-    "message":"Comment"
+    "message": "Comment"
   },
   "showing": {
-    "message":"Showing"
+    "message": "Showing"
   },
   "new_login": {
-    "message":"New Login"
+    "message": "New Login"
   },
   "enter_your_pass_phrase": {
-    "message":"Enter your pass phrase"
+    "message": "Enter your pass phrase"
   },
   "cancel": {
-    "message":"Cancel"
+    "message": "Cancel"
   },
   "unlock": {
-    "message":"Unlock"
+    "message": "Unlock"
   },
   "password_generator": {
-    "message":"Password Generator"
+    "message": "Password Generator"
   },
   "generate_new": {
-    "message":"Generate new"
+    "message": "Generate new"
   },
   "numbers": {
-    "message":"Numbers"
+    "message": "Numbers"
   },
   "special_characters": {
-    "message":"Special Characters"
+    "message": "Special Characters"
   },
   "password_length": {
-    "message":"Password Length"
+    "message": "Password Length"
   },
   "use_password": {
-    "message":"Use Password"
+    "message": "Use Password"
   },
   "loading": {
-    "message":"Loading"
+    "message": "Loading"
   },
   "show": {
-    "message":"Show"
+    "message": "Show"
   },
   "hide": {
-    "message":"Hide"
+    "message": "Hide"
   },
   "created_at": {
-    "message":"Created at"
+    "message": "Created at"
   },
   "updated_at": {
-    "message":"Updated at"
+    "message": "Updated at"
   },
-
   "my_vault": {
-    "message":"My Vault"
+    "message": "My Vault"
   },
   "my_notes": {
-    "message":"My notes"
+    "message": "My notes"
   },
   "generate_password": {
-    "message":"Generate Password"
+    "message": "Generate Password"
   },
   "help": {
-    "message":"Help"
+    "message": "Help"
   },
   "options": {
-    "message":"Options"
+    "message": "Options"
   },
   "logout": {
-    "message":"Logout"
+    "message": "Logout"
   },
   "copy_password": {
-    "message":"Copy Password"
+    "message": "Copy Password"
   },
   "use": {
-    "message":"Use"
+    "message": "Use"
   },
   "remember_passphrase": {
-    "message":"Remember Passphrase"
+    "message": "Remember Passphrase"
   },
   "close": {
-    "message":"Close"
+    "message": "Close"
   },
   "elements_for": {
-    "message":"Logins for"
+    "message": "Logins for"
   },
   "store_login_for": {
-    "message":"Store login for"
+    "message": "Store login for"
   },
   "store_as_new_item": {
-    "message":"Store as new Login"
+    "message": "Store as new Login"
   },
   "update_existing_login": {
-    "message":"Update existing login"
+    "message": "Update existing login"
   },
   "validation_failed": {
-    "message":"API validation failed, check your settings."
+    "message": "API validation failed, check your settings."
   },
-
   "invalidChars": {
     "message": "Invalid character(s)"
   },
   "fetchError": {
-    "message": "Error: Failed to connect to nowpass API."
+    "message": "Error: Failed to connect to NOWPASS API."
+  },
+  "login_success": {
+    "message": "Login was successful!"
+  },
+  "you_are_now_connected_to_nowpass": {
+    "message": "You are now connected to NOWPASS!"
+  },
+  "delete_element": {
+    "message": "Delete element"
+  },
+  "duplicate_element": {
+    "message": "Duplicate Element"
   }
 }

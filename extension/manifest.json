@@ -4,8 +4,18 @@
   "description": "__MSG_extDesc__",
   "version": "0.1.0",
   "default_locale": "en",
+  "author": "Yves Hoppe <yves.hoppe@nowpass.org>",
+  "icons": {
+    "16": "static/img/icon-32.png",
+    "32": "static/img/icon-32.png",
+    "64": "static/img/icon-64.png",
+    "128": "static/img/icon-128.png"
+  },
   "browser_action": {
-    "default_icon": "static/img/icon-64.png",
+    "default_icon": {
+      "16": "static/img/icon-32.png",
+      "32": "static/img/icon-32.png"
+    },
     "default_popup": "views/start.html#/popup",
     "default_title": "__MSG_ext_default_title__"
   },
@@ -42,6 +52,7 @@
     "*://*/*"
   ],
   "web_accessible_resources": [
-    "views/start.html"
+    "views/start.html",
+    "views/popup.html"
   ]
 }

@@ -26,7 +26,7 @@ export default function(params) {
 
     // We have a username, so two fields (at least to fill)
     // First checks if we have form data, than checks if we have a preset for this site, than searches the DOM
-    result = userData(params);
+    let result = userData(params);
 
     if (result) {
         return true;

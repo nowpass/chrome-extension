@@ -8,7 +8,7 @@ import tabHelper from './helpers/tab'
 
 // Make sure temporary passphrase is cleaned
 chrome.runtime.onStartup.addListener(function () {
-    chrome.storage.localStorage.setItem('temporary_passphrase', '')
+    window.localStorage.setItem('temporary_passphrase', '')
 });
 
 /*--------Context-Menus--------*/
@@ -67,8 +67,48 @@ webRequest.onBeforeRequest.addListener(
 );
 
 chrome.runtime.onMessage.addListener(function (request, sender) {
+    console.log('Got a message from the foreground: ' + JSON.stringify(request));
+
     // We have to show the post
     if (request.type === 'notification' && request.options.message === 'ready') {
         handlerPost.ready();
     }
+
+    /* Passing messages from backend to frontend, in certain browsers chrome.tabs is not available in iframes */
+    // We have to close the popup (this has been scheduled over the popup -> backend -> frontend
+    if (request.type === 'notification' && request.options.message.task === 'insertClose') {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            let lastTabId = tabs[0].id;
+            chrome.tabs.sendMessage(lastTabId, {
+                task: 'insertClose',
+            });
+        });
+    }
+
+    if (request.type === 'notification' && request.options.message.task === 'insert') {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            let lastTabId = tabs[0].id;
+            chrome.tabs.sendMessage(lastTabId, request.options.message);
+        });
+    }
+
+    if (request.type === 'notification' && request.options.message.task === 'generatedClose') {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            let lastTabId = tabs[0].id;
+            chrome.tabs.sendMessage(lastTabId, {
+                task: 'generatedClose',
+            });
+        });
+    }
+
+    if (request.type === 'notification' && request.options.message.task === 'generatedInsert') {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            let lastTabId = tabs[0].id;
+            chrome.tabs.sendMessage(lastTabId, {
+                task: 'generatedInsert',
+                generatedPassword: request.options.message.generatedPassword
+            });
+        });
+    }
+
 });

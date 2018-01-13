@@ -40,9 +40,11 @@ export default class Login {
                 popup.showIframe(element, message.url)
             } else if (message.task === 'insert') {
                 // Insert elements
+                console.log(message.login);
+
                 window.nowpass.login.setLogin(message.login);
                 window.nowpass.login.insert();
-            } else if (message.task === 'close') {
+            } else if (message.task === 'insertClose') {
                 // Close elements
                 popup.closePopup();
             }
