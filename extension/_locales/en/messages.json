@@ -12,6 +12,9 @@
     "message": "ltr"
   },
   "save": {
+    "message": "Save"
+  },
+  "save_and_login": {
     "message": "Save and Login"
   },
   "saveStatus": {
@@ -175,5 +178,11 @@
   },
   "duplicate_element": {
     "message": "Duplicate Element"
+  },
+  "no_notes": {
+    "message": "No notes"
+  },
+  "no_elements": {
+    "message": "No elements"
   }
 }
