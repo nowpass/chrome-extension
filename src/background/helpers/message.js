@@ -26,8 +26,6 @@ export default {
      * @returns {null}
      */
     handleMessage: function (request, sender, sendResponse) {
-        console.log('Chrome Handler called');
-
         return null;
     }
 }

@@ -3,11 +3,9 @@
  *
  * TODO add autocomplete="current-password" etc.
  */
-export default {
-    // TODO Move
-    USER_REGEX: /user|benutzer|login|email/gi,
-    PASSWORD_REGEX: /pass|pw|passwort/gi,
+import {USER_REGEX, PASSWORD_REGEX} from "../helpers/constants";
 
+export default {
     /**
      * Search for a user input on the page (TODO merge with searchPassword)
      * @param params {object}
@@ -19,7 +17,7 @@ export default {
         // Let's make a check if the clicked field is a username
         if (clickedElement.tag === 'INPUT' && clickedElement.type !== 'password') {
             // Chance of being the username
-            let result = this.checkElement(clickedElement, this.USER_REGEX);
+            let result = this.checkElement(clickedElement, USER_REGEX);
 
             if (result) {
                 return result;
@@ -33,7 +31,7 @@ export default {
             let elements = document.forms[clickedElement.form].getElementsByTagName("input");
 
             for (let i = 0; i < elements.length; i++) {
-                let result = this.checkElement(elements[i], this.USER_REGEX);
+                let result = this.checkElement(elements[i], USER_REGEX);
 
                 if (result) {
                     return result;
@@ -45,7 +43,7 @@ export default {
         let elements = document.getElementsByTagName('input');
 
         for (let i = 0; i < elements.length; i++) {
-            let result = this.checkElement(elements[i], this.USER_REGEX);
+            let result = this.checkElement(elements[i], USER_REGEX);
 
             if (result) {
                 return result;
@@ -67,7 +65,7 @@ export default {
         // Let's make a check if the clicked field is a username
         if (clickedElement.tag === 'INPUT' && clickedElement.type === 'password') {
             // Chance of being the username
-            let result = this.checkElement(clickedElement, this.PASSWORD_REGEX);
+            let result = this.checkElement(clickedElement, PASSWORD_REGEX);
 
             if (result) {
                 return result;
@@ -81,7 +79,7 @@ export default {
             let elements = document.forms[clickedElement.form].getElementsByTagName("input");
 
             for (let i = 0; i < elements.length; i++) {
-                let result = this.checkElement(elements[i], this.PASSWORD_REGEX);
+                let result = this.checkElement(elements[i], PASSWORD_REGEX);
 
                 if (result) {
                     return result;
@@ -93,7 +91,7 @@ export default {
         let elements = document.getElementsByTagName('input');
 
         for (let i = 0; i < elements.length; i++) {
-            let result = this.checkElement(elements[i], this.PASSWORD_REGEX);
+            let result = this.checkElement(elements[i], PASSWORD_REGEX);
 
             if (result) {
                 return result;

@@ -29,10 +29,8 @@ export default class Login {
      * Init the Listeners (called on construct)
      */
     init() {
-        // Receive message for Login tasks
+        // Receive message for Login tasks from background
         chrome.runtime.onMessage.addListener(function(message, _, sendResponse) {
-            console.log("Got message from background page: " + JSON.stringify(message));
-
             let element = window.nowpass.clickedElement || document.activeElement;
 
             if (message.task === 'elements') {
@@ -40,8 +38,6 @@ export default class Login {
                 popup.showIframe(element, message.url)
             } else if (message.task === 'insert') {
                 // Insert elements
-                console.log(message.login);
-
                 window.nowpass.login.setLogin(message.login);
                 window.nowpass.login.insert();
             } else if (message.task === 'insertClose') {

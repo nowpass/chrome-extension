@@ -1,10 +1,10 @@
 /**
  * FormData helper object
  */
+import {PASSWORD_REGEX} from "../../content/helpers/constants";
+
 export default {
     name: 'formData',
-
-    PASSWORD_REGEX: /pass|pw|passwort/gi,
 
     /**
      * Simple form data analyzes if it contains an password element
@@ -13,7 +13,7 @@ export default {
      */
     containsPassword(formData) {
         for (let key in formData) {
-            if (this.PASSWORD_REGEX.test(key)) {
+            if (PASSWORD_REGEX.test(key)) {
                 return key;
             }
         }

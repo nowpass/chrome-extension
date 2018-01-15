@@ -17,12 +17,10 @@ export default class Store {
     init() {
         // Receive message for Login tasks
         chrome.runtime.onMessage.addListener(function(message, _, sendResponse) {
-            console.log("Got message from background page: " + JSON.stringify(message));
-
             if (message.task === 'storePopup') {
                 // Show storing iframe
                 popup.showIframe(null, message.url)
-            } else if (message.task === 'closePopup') {
+            } else if (message.task === 'storeClose') {
                 popup.closePopup();
             }
         });

@@ -38,8 +38,6 @@ export default class Generator {
      * Inserts the generated password into the given field
      */
     insert(pass) {
-        console.log(pass);
-
         let clickedElement = window.nowpass.clickedElement || document.activeElement;
 
         let tag = clickedElement.tagName;

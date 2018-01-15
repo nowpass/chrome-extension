@@ -54,6 +54,11 @@ export default {
         return def;
     },
 
+    /**
+     * Store an item in the local storage
+     * @param key {string}
+     * @param val {string}
+     */
     set: function (key, val) {
         window.localStorage.setItem(key, val);
     }

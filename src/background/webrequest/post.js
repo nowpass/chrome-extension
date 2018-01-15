@@ -61,7 +61,7 @@ export default {
 
             let host = urlHelper.parse(details.url).host;
 
-            console.log('sending store message (we have a lastPostRequest)');
+            // Sending store message (we have a lastPostRequest)
 
             // Handle
             message.sendMessage({
