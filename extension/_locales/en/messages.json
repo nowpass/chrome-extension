@@ -33,7 +33,7 @@
     "message": "Email / Login"
   },
   "apiPassword": {
-    "message": "Pass phrase"
+    "message": "Password"
   },
   "storePassphrase": {
     "message": "Store pass phrase in Chrome?"
