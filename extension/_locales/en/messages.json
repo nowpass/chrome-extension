@@ -184,5 +184,11 @@
   },
   "no_elements": {
     "message": "No elements"
+  },
+  "login_required": {
+    "message":"API Login required"
+  },
+  "you_are_not_connected_to_nowpass": {
+    "message":"You are currently not connceted to a NOWPASS API server. You can either use your own or https://nowpass.org (after registration)"
   }
 }
