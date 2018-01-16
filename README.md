@@ -6,8 +6,7 @@ This is the Google Chrome extension of the NOWPASS Open Source password manager.
 
 ## Installation Instructions
 
-Once published, you are going to be able to also install the release version from the [Chrome Web Store](https://extensions.google.com).
-
+Once published, you are going to be able to also install the release version from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nowpass-password-manager/cjpobjdihgffjlpdnnhmggckbehbmfap) (Currently only for testers)
 
 ## Development
 
