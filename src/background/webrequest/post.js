@@ -30,12 +30,10 @@ export default {
      * @param details
      */
     post: function(details) {
-        // We just handle post data
-        if(details.method !== "POST") {
-            return;
-        }
+        const handledMethods = ['POST', 'PUT'];
 
-        if (!storage.getPassphrase()) {
+        // We just handle post data
+        if (handledMethods.indexOf(details.method.toUpperCase()) === -1) {
             return;
         }
 

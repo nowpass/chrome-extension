@@ -190,5 +190,37 @@
   },
   "you_are_not_connected_to_nowpass": {
     "message":"You are currently not connceted to a NOWPASS API server. You can either use your own or https://nowpass.org (after registration)"
+  },
+
+  "export": {
+    "message": "Export"
+  },
+  "error_exporting": {
+    "message": "Error exporting"
+  },
+  "export_vault_as_json": {
+    "message": "Export Vault as JSON"
+  },
+  "export_all_saved_elements_from_the_vault": {
+    "message":"Export all saved Elements for the Vault"
+  },
+  "clear_text_passwords": {
+    "message":"Include passwords in clear text (careful)"
+  },
+
+  "download_json": {
+    "message": "Download JSON"
+  },
+  "export_secure_notes_as_json": {
+    "message": "Export secure notes as JSON"
+  },
+  "export_all_notes": {
+    "message": "Export all notes"
+  },
+  "notes_with_clear_text": {
+    "message":"Include clear text of the notes content (careful)"
+  },
+  "you_need_to_login_first": {
+    "message":"Please login first"
   }
 }
