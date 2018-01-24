@@ -1,1 +1,0 @@
-/home/g0ne/projects/yvesh/nowpass-vue-full/dist/static/js/manifest.js

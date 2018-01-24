@@ -222,5 +222,8 @@
   },
   "you_need_to_login_first": {
     "message":"Please login first"
+  },
+  "delete_note": {
+    "message":"Delete Note"
   }
 }

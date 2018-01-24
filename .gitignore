@@ -4,6 +4,11 @@ dist/
 npm-debug.log
 yarn-error.log
 
+# Files from nowpass-vue-frontend
+extension/static/js/app.js
+extension/static/js/manifest.js
+extension/static/js/vendor.js
+
 # Editor directories and files
 .idea
 *.suo
