@@ -3,10 +3,10 @@
   "name": "__MSG_extName__",
   "short_name": "NOWPASS",
   "description": "__MSG_extDesc__",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "default_locale": "en",
   "author": "Yves Hoppe <yves.hoppe@nowpass.org>",
-  "minimum_chrome_version": "56.0",
+  "minimum_chrome_version": "63.0",
   "icons": {
     "16": "static/img/icon-32.png",
     "32": "static/img/icon-32.png",

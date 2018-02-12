@@ -225,5 +225,8 @@
   },
   "delete_note": {
     "message":"Delete Note"
+  },
+  "error_loading_elements": {
+    "message":"Error loading Elements"
   }
 }

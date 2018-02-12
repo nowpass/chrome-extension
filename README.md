@@ -1,6 +1,6 @@
 # NOWPASS Chrome Extension
 
-> Please note that NOWPASS is currently in an early alpha stage and not ready for productive use.
+> Please note that NOWPASS is currently in an early alpha stage.
 
 This is the Google Chrome extension of the NOWPASS Open Source password manager. It also works with Chromium, Vivaldi and Opera.
 
