@@ -3,8 +3,9 @@ import handleGenerate from './context/generator'
 import handleNote from './context/note'
 
 import handlerPost from './webrequest/post'
-
 import tabHelper from './helpers/tab'
+
+import handleSiteStore from './helpers/storesite'
 
 // Make sure temporary passphrase is cleaned
 chrome.runtime.onStartup.addListener(function () {
@@ -115,6 +116,15 @@ chrome.runtime.onMessage.addListener(function (request, sender) {
             chrome.tabs.sendMessage(lastTabId, {
                 task: 'storeClose'
             });
+        });
+    }
+
+    // Store website URL
+    if (request.type === 'notification' && request.options.message.task === 'storeSite') {
+        console.log('Storing current website!');
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            let siteUrl = tabs[0].url;
+            handleSiteStore(siteUrl);
         });
     }
 });

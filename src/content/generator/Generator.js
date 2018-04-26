@@ -1,4 +1,5 @@
 import popup from '../helpers/popup'
+import notify from "../../background/helpers/notification";
 
 /**
  * Generator View
@@ -20,6 +21,8 @@ export default class Generator {
     init() {
         // Receive message for Login tasks
         chrome.runtime.onMessage.addListener(function(message, _, sendResponse) {
+            console.log(message);
+
             if (message.task === 'generate') {
                 let element = window.nowpass.clickedElement || document.activeElement;
 
@@ -47,7 +50,8 @@ export default class Generator {
         } else if (tag === 'TEXTAREA') {
             clickedElement.innerHTML = pass;
         } else {
-            console.log('Can not handle tag ' + tag);
+            console.log('Can not handle insert tag element ' + tag + ' for generated password.');
+            // TODO show Notification
         }
 
         window.nowpass.clickedElement = null;

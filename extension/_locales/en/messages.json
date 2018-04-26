@@ -191,7 +191,6 @@
   "you_are_not_connected_to_nowpass": {
     "message":"You are currently not connceted to a NOWPASS API server. You can either use your own or https://nowpass.org (after registration)"
   },
-
   "export": {
     "message": "Export"
   },
@@ -207,7 +206,6 @@
   "clear_text_passwords": {
     "message":"Include passwords in clear text (careful)"
   },
-
   "download_json": {
     "message": "Download JSON"
   },
@@ -228,5 +226,23 @@
   },
   "error_loading_elements": {
     "message":"Error loading Elements"
+  },
+  "my_sites": {
+    "message":"My Sites"
+  },
+  "store_current_site": {
+    "message":"Save Site URL"
+  },
+  "delete_site": {
+    "message":"Delete Site"
+  },
+  "no_sites": {
+    "message":"No Sites"
+  },
+  "tags": {
+    "message":"Tags"
+  },
+  "sites": {
+    "message":"Sites"
   }
 }

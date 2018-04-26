@@ -63,7 +63,10 @@ export default {
      * Close a popup
      */
     closePopup() {
+        console.log('Closing popup ' + JSON.stringify(this.popup));
+
         if (!this.popup) {
+            console.log('No active Popup found!');
             return;
         }
 
