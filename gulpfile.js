@@ -13,6 +13,8 @@ gulp.task('default', () => {
 });
 
 gulp.task('clean', async () => {
+    console.log('Building ' + config.version);
+
     try {
         fs.removeSync(destination);
     } catch (err) {

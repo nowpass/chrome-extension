@@ -1,6 +1,6 @@
 {
   "name": "nowpass-chrome",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Chrome extension of the NOWPASS password manager",
   "main": "index.js",
   "dependencies": {
